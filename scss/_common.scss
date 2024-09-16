@@ -19,4 +19,10 @@ body {
    font-family: $mainFont;
    font-size: toRem(18);
    color: $grey;
+
+   &.menu-open {
+      overflow: hidden;
+      touch-action: none;
+      overscroll-behavior: none;
+   }
 }

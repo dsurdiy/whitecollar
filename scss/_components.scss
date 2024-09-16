@@ -1,0 +1,114 @@
+.social {
+   display: flex;
+   flex-wrap: wrap;
+   gap: toRem(6);
+   // .social-header__item
+   &__item {
+   }
+   // .social-header__link
+   &__link {
+      padding: toRem(5);
+      transition: transform 0.3s;
+      @media (any-hover: hover) {
+         &:hover {
+            transform: scale(1.3);
+         }
+      }
+   }
+   // .social-header__image
+   &__image {
+      width: toRem(17);
+      height: toRem(16);
+      object-fit: contain;
+   }
+}
+
+// =============================================================================================================
+
+.top {
+   position: relative;
+   // .top__content
+   &__content {
+      position: relative;
+      z-index: 1;
+      width: 43.125%; /* 828/1920 */
+      min-height: toRem(458);
+      padding-block: toRem(50);
+      padding-inline: 9.010417%; /* 173/1920 */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: rgba(55, 57, 63, 0.91);
+      backdrop-filter: blur(9px);
+      color: #fff;
+      line-height: 1.46;
+      @media (max-width: toEm(1400)) {
+         padding-inline: toRem(55);
+      }
+      @media (max-width: toEm($pc)) {
+         width: 50%;
+      }
+      @media (max-width: toEm($tablet)) {
+         padding-inline: toRem(30);
+      }
+      @media (max-width: toEm($mobile)) {
+         width: 100%;
+         background-color: rgba(55, 57, 63, 0.8);
+         backdrop-filter: none;
+      }
+   }
+   // .top__sub-title
+   &__sub-title {
+      display: flex;
+      align-items: center;
+      gap: toRem(7);
+      font-weight: 600;
+      &::before {
+         content: "";
+         flex: 0 0 toRem(11);
+         width: toRem(11);
+         height: toRem(11);
+         background-color: $accent;
+      }
+      &:not(:last-child) {
+         margin-bottom: toRem(10);
+      }
+   }
+   // .top__title
+   &__title {
+      text-transform: capitalize;
+      font-size: toRem(60);
+      line-height: 1.1;
+      font-family: $secondaryFont;
+      font-weight: 700;
+      &:not(:last-child) {
+         margin-bottom: toRem(20);
+      }
+      @media (max-width: toEm($pc)) {
+         font-size: toRem(55);
+      }
+      @media (max-width: toEm($tablet)) {
+         font-size: toRem(50);
+      }
+   }
+   // .top__text
+   &__text {
+      color: #b9b9b9;
+      p {
+         &:not(:last-child) {
+            margin-bottom: toRem(8);
+         }
+      }
+   }
+   // .top__image
+   &__image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+}
+
+// =============================================================================================================
