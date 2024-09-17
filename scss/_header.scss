@@ -169,24 +169,7 @@
     position: relative;
     z-index: 5;
     flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    min-height: toRem(65);
-    padding: toRem(10) toRem(35);
-    background-color: $secondary;
-    font-family: $accentFont;
-    color: #fff;
-    font-weight: 600;
-    transition: all 0.3s;
-    @media (any-hover: hover) {
-      &:hover {
-        background-color: $accent;
-        color: $dark;
-      }
-    }
     @media (max-width: toEm($mobile)) {
-      min-height: toRem(50);
-      padding: toRem(8) toRem(20);
       margin-left: auto;
     }
   }
