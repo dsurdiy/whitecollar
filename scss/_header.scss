@@ -125,40 +125,6 @@
     position: relative;
     z-index: 5;
     flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    img {
-      flex: 0 0 toRem(43);
-      width: toRem(43);
-      height: toRem(30);
-      object-fit: contain;
-      margin-right: toRem(4);
-    }
-  }
-  // .header__text-logo
-  &__text-logo {
-    font-family: $secondaryFont;
-    font-weight: 700;
-    font-size: toRem(25);
-    color: $dark;
-    transition: color 0.3s;
-    span {
-      color: $secondary;
-      transition: color 0.3s;
-      @media (any-hover: hover) {
-        .header__logo:hover & {
-          color: $accent;
-        }
-      }
-    }
-    @media (any-hover: hover) {
-      .header__logo:hover & {
-        color: $secondary;
-      }
-    }
-    @media (max-width: toEm($mobileSmall)) {
-      display: none;
-    }
   }
   // .header__menu
   &__menu {
@@ -311,3 +277,5 @@
     }
   }
 }
+
+// =============================================================================================================

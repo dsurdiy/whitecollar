@@ -184,6 +184,7 @@
 .button {
    display: inline-flex;
    align-items: center;
+   justify-content: center;
    text-align: center;
    min-height: toRem(65);
    padding: toRem(10) toRem(35);
@@ -211,7 +212,56 @@
    }
    @media (max-width: toEm($mobile)) {
       min-height: toRem(50);
-      padding: toRem(8) toRem(20);
+      padding: toRem(10) toRem(20);
+   }
+}
+
+// =============================================================================================================
+
+.logo {
+   display: flex;
+   align-items: center;
+   // .logo__icon
+   &__icon {
+      flex: 0 0 toRem(42);
+      width: toRem(42);
+      height: toRem(29);
+      object-fit: contain;
+      margin-right: toRem(4);
+   }
+   // .logo__text
+   &__text {
+      font-family: $secondaryFont;
+      font-weight: 700;
+      font-size: toRem(25);
+      color: $dark;
+      transition: color 0.3s;
+      span {
+         color: $secondary;
+         transition: color 0.3s;
+         @media (any-hover: hover) {
+            .logo:hover & {
+               color: $accent;
+            }
+         }
+         .footer__logo & {
+            color: $accent;
+         }
+      }
+      @media (any-hover: hover) {
+         .logo:hover & {
+            color: $secondary;
+         }
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         display: none;
+         .footer__logo & {
+            display: flex;
+         }
+      }
+      .footer__logo & {
+         color: #fff;
+      }
    }
 }
 
