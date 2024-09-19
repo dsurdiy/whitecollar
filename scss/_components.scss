@@ -264,7 +264,7 @@
       line-height: 1.46;
       p {
          &:not(:last-child) {
-            margin-bottom: toRem(7);
+            margin-bottom: toRem(15);
          }
       }
    }
@@ -278,8 +278,8 @@
    justify-content: center;
    text-align: center;
    min-height: toRem(65);
-   padding: toRem(10) toRem(35);
-   font-family: $accentFont;
+   min-width: toRem(185);
+   padding: toRem(10) toRem(15);
    font-weight: 600;
    color: #fff;
    line-height: 1.22;
@@ -304,6 +304,9 @@
    @media (max-width: toEm($mobile)) {
       min-height: toRem(50);
       padding: toRem(10) toRem(20);
+   }
+   &.header__button {
+      font-family: $accentFont;
    }
 }
 
