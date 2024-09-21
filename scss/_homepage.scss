@@ -5,6 +5,9 @@
    // .page__clients
    &__clients {
    }
+   // .page__services
+   &__services {
+   }
 }
 
 // =============================================================================================================
@@ -271,6 +274,145 @@
    &__logo {
       max-width: 100%;
       object-fit: contain;
+   }
+}
+
+// =============================================================================================================
+
+.services {
+   padding: toRem(40) toRem(0) toRem(130) toRem(0);
+   @media (max-width: toEm($pc)) {
+      padding-bottom: toRem(100);
+   }
+   @media (max-width: toEm($tablet)) {
+      padding-bottom: toRem(70);
+   }
+   @media (max-width: toEm($mobile)) {
+      padding: toRem(40) toRem(0);
+   }
+   // .services__container
+   &__container {
+   }
+   // .services__header
+   &__header {
+      max-width: toRem(510);
+      margin: 0 auto;
+      &:not(:last-child) {
+         margin-bottom: toRem(40);
+         @media (max-width: toEm($mobile)) {
+            margin-bottom: toRem(25);
+         }
+      }
+   }
+   // .services__list
+   &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: toRem(32);
+      row-gap: toRem(27);
+      @media (max-width: toEm($pc)) {
+         gap: toRem(20);
+      }
+      @media (max-width: toEm(1100)) {
+         grid-template-columns: repeat(2, 1fr);
+      }
+      @media (max-width: toEm($mobile)) {
+         grid-template-columns: auto;
+         gap: toRem(10);
+      }
+   }
+   // .services__item
+   &__item {
+      @media (max-width: toEm($mobileSmall)) {
+         margin: 0 toRem(-15);
+      }
+   }
+   // .services__link-more
+   &__link-more {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: toRem(25);
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.2;
+      background-color: $secondary;
+      transition: background-color 0.3s;
+      @media (any-hover: hover) {
+         &:hover {
+            background-color: $accent;
+         }
+      }
+      @media (max-width: toEm($mobile)) {
+         padding: toRem(20);
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         font-size: toRem(22);
+      }
+   }
+}
+
+.item-services {
+   padding: toRem(30);
+   background-color: $mainBg;
+   display: flex;
+   align-items: flex-start;
+   justify-content: space-between;
+   gap: toRem(30);
+   @media (max-width: toEm($mobileSmall)) {
+      padding: toRem(20) toRem(15);
+   }
+   // .item-services__content
+   &__content {
+   }
+   // .item-services__title
+   &__title {
+      font-family: $secondaryFont;
+      font-weight: 600;
+      font-size: toRem(25);
+      line-height: 1.27;
+      color: $dark;
+      &:not(:last-child) {
+         margin-bottom: toRem(27);
+         @media (max-width: toEm($mobileSmall)) {
+            margin-bottom: toRem(15);
+         }
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         font-size: toRem(22);
+      }
+   }
+   // .item-services__link
+   &__link {
+      font-weight: 600;
+      color: $secondary;
+      transition: all 0.3s;
+      @media (any-hover: hover) {
+         &:hover {
+            color: $accent;
+         }
+      }
+   }
+   // .item-services__image
+   &__image {
+      flex: 0 0 toRem(72);
+      width: toRem(72);
+      height: toRem(72);
+      border-radius: 50%;
+      background-color: $accent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: toRem(5);
+      &--accent {
+         background-color: $secondary;
+      }
+      img {
+         max-width: 100%;
+         object-fit: contain;
+      }
    }
 }
 
