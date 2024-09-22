@@ -17,6 +17,9 @@
    // .page__testimonial
    &__testimonial {
    }
+   // .page__how
+   &__how {
+   }
 }
 
 // =============================================================================================================
@@ -828,6 +831,270 @@
          font-size: toRem(18);
          line-height: 1.22;
       }
+   }
+}
+
+// =============================================================================================================
+
+.how {
+   padding: toRem(120) toRem(0);
+   background-color: $secondary;
+   color: #fff;
+   @media (max-width: toEm($pc)) {
+      padding: toRem(100) toRem(0);
+   }
+   @media (max-width: toEm($tablet)) {
+      padding: toRem(70) toRem(0);
+   }
+   @media (max-width: toEm($mobile)) {
+      padding: toRem(40) toRem(0);
+   }
+   // .how__container
+   &__container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      column-gap: toRem(30);
+      @media (max-width: toEm($pc)) {
+         flex-direction: column;
+         row-gap: toRem(70);
+      }
+      @media (max-width: toEm($mobile)) {
+         row-gap: toRem(35);
+      }
+   }
+   // .how__content
+   &__content {
+      flex: 0 1 toRem(587);
+      @media (max-width: toEm($pc)) {
+         margin: 0 auto;
+      }
+   }
+   // .how__header
+   &__header {
+      .section-header__container {
+         padding: 0;
+         color: inherit;
+         @media (max-width: toEm($pc)) {
+            max-width: toRem(700);
+            justify-items: center;
+         }
+      }
+      .section-header__title {
+         max-width: toRem(426);
+      }
+      .section-header__text {
+         color: inherit;
+      }
+      &:not(:last-child) {
+         margin-bottom: toRem(30);
+      }
+      @media (max-width: toEm($pc)) {
+         text-align: center;
+      }
+   }
+   // .how__projects
+   &__projects {
+      padding: toRem(35);
+      display: flex;
+      align-items: center;
+      gap: toRem(23);
+      background-color: $accent;
+      font-family: $secondaryFont;
+      &:not(:last-child) {
+         margin-bottom: toRem(50);
+         @media (max-width: toEm($pc)) {
+            margin-bottom: toRem(25);
+         }
+      }
+      @media (max-width: toEm($mobile)) {
+         padding: toRem(20) toRem(15);
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         flex-direction: column;
+         text-align: center;
+         gap: toRem(10);
+         margin: 0 toRem(-15);
+      }
+   }
+   // .how__count
+   &__count {
+      flex: 0 0 toRem(128);
+      width: toRem(128);
+      height: toRem(128);
+      border-radius: 50%;
+      border: toRem(3) solid $secondary;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      line-height: 1.21;
+      span {
+         font-weight: 700;
+         font-size: toRem(35);
+         @media (max-width: toEm($mobile)) {
+            font-size: toRem(30);
+         }
+         @media (max-width: toEm($mobileSmall)) {
+            font-size: toRem(25);
+         }
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         flex: 0 0 toRem(100);
+         width: toRem(100);
+         height: toRem(100);
+      }
+   }
+   // .how__text
+   &__text {
+      font-size: toRem(25);
+      line-height: 1.28;
+      @media (max-width: toEm($mobile)) {
+         font-size: toRem(20);
+      }
+      span {
+         font-weight: 700;
+      }
+   }
+   // .how__list
+   &__list {
+      padding-right: toRem(70);
+      @media (max-width: toEm($pc)) {
+         padding-right: 0;
+      }
+   }
+   // .how__book-now
+   &__book-now {
+      flex: 0 0 toRem(580);
+   }
+   // .how__form
+   &__form {
+      @media (max-width: toEm($mobileSmall)) {
+         margin: 0 toRem(-10);
+      }
+   }
+}
+
+.list-how {
+   // .list-how__item
+   &__item {
+      display: flex;
+      gap: toRem(16);
+      &::before {
+         content: "";
+         flex: 0 0 toRem(27);
+         width: toRem(27);
+         height: toRem(27);
+         background: url("../img/icons/list-item-accent.svg") 0 0 / contain no-repeat;
+         margin-top: toRem(5);
+      }
+      &:not(:last-child) {
+         margin-bottom: toRem(18);
+         @media (max-width: toEm($mobileSmall)) {
+            margin-bottom: toRem(10);
+         }
+      }
+      @media (max-width: toEm($pc)) {
+         justify-content: center;
+      }
+   }
+   // .list-how__content
+   &__content {
+      .list-how__item:not(:last-child) & {
+         padding-bottom: toRem(20);
+         border-bottom: toRem(1) solid #fff;
+         @media (max-width: toEm($mobile)) {
+            padding-bottom: toRem(10);
+         }
+      }
+   }
+   // .list-how__title
+   &__title {
+      font-family: $secondaryFont;
+      font-weight: 600;
+      font-size: toRem(22);
+      line-height: 1.5;
+      @media (max-width: toEm($mobileSmall)) {
+         font-size: toRem(20);
+      }
+   }
+   // .list-how__text
+   &__text {
+      line-height: 1.46;
+   }
+}
+
+.form-how {
+   background-color: #fff;
+   padding: toRem(58);
+   @media (max-width: toEm($pc)) {
+      text-align: center;
+   }
+   @media (max-width: toEm($mobile)) {
+      padding: toRem(40) toRem(20);
+   }
+   // .form-how__body
+   &__body {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: toRem(30);
+      column-gap: toRem(22);
+      &:not(:last-child) {
+         margin-bottom: toRem(25);
+      }
+   }
+   // .form-how__item
+   &__item {
+      flex: 1 1 100%;
+      &--small {
+         flex: 1 1 47%;
+         @media (max-width: toEm($mobileSmall)) {
+            flex: 1 1 100%;
+         }
+      }
+      &--date {
+         position: relative;
+         &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: toRem(18);
+            width: toRem(16);
+            height: toRem(16);
+            background: url("../img/icons/date.svg") 0 0 / contain no-repeat;
+            transform: translateY(-50%);
+         }
+      }
+   }
+   // .form-how__input
+   &__input {
+      width: 100%;
+      height: toRem(65);
+      padding: toRem(10) toRem(33);
+      background-color: #f8f8f8;
+      border: toRem(1) solid #ddd;
+      &::placeholder {
+         color: $dark;
+      }
+      .form-how__item--date & {
+         padding-right: toRem(45);
+      }
+   }
+   // .form-how__textarea
+   &__textarea {
+      width: 100%;
+      min-height: toRem(139);
+      padding: toRem(11) toRem(33);
+      background-color: #f8f8f8;
+      border: toRem(1) solid #ddd;
+      resize: vertical;
+      &::placeholder {
+         color: $dark;
+      }
+   }
+   // .form-how__button
+   &__button {
    }
 }
 
