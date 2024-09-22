@@ -20,6 +20,9 @@
    // .page__how
    &__how {
    }
+   // .page__team
+   &__team {
+   }
 }
 
 // =============================================================================================================
@@ -1095,6 +1098,70 @@
    }
    // .form-how__button
    &__button {
+   }
+}
+
+// =============================================================================================================
+
+.team {
+   position: relative;
+   min-height: toRem(734);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   @media (max-width: toEm($tablet)) {
+      min-height: toRem(650);
+   }
+   @media (max-width: toEm($mobile)) {
+      min-height: toRem(520);
+   }
+   // .team__container
+   &__container {
+      position: relative;
+      z-index: 1;
+   }
+   // .team__link
+   &__link {
+      padding: toRem(87) toRem(130);
+      background-color: rgba(55, 57, 63, 0.8);
+      backdrop-filter: blur(7px);
+      text-align: center;
+      transition: background-color 0.3s;
+      @media (any-hover: hover) {
+         &:hover {
+            background-color: $accent;
+         }
+      }
+      @media (max-width: toEm($pc)) {
+         padding: toRem(50) toRem(100);
+      }
+      @media (max-width: toEm($mobile)) {
+         padding: toRem(30) toRem(60);
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         padding: toRem(30);
+      }
+   }
+   // .team__title
+   &__title {
+      font-family: $secondaryFont;
+      font-weight: 700;
+      font-size: toRem(40);
+      line-height: 1.21;
+      color: #fff;
+      @media (max-width: toEm($mobile)) {
+         font-size: toRem(30);
+      }
+   }
+   // .team__image
+   &__image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
    }
 }
 
