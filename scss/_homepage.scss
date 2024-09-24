@@ -26,6 +26,19 @@
    // .page__news
    &__news {
    }
+   // .page__subscribe
+   &__subscribe {
+      margin-bottom: toRem(200);
+      @media (max-width: toEm($pc)) {
+         margin-bottom: toRem(100);
+      }
+      @media (max-width: toEm($tablet)) {
+         margin-bottom: toRem(70);
+      }
+      @media (max-width: toEm($mobile)) {
+         margin-bottom: toRem(40);
+      }
+   }
 }
 
 // =============================================================================================================
@@ -1218,6 +1231,57 @@
    }
    // .news__blog
    &__blog {
+   }
+}
+
+// =============================================================================================================
+
+.subscribe {
+   // .subscribe__container
+   &__container {
+   }
+   // .subscribe__body
+   &__body {
+      margin: 0 toRem(-15);
+      position: relative;
+      padding: toRem(96) toRem(15);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: toRem(26);
+      background-color: rgba(64, 221, 182, 0.75);
+      @media (max-width: toEm($tablet)) {
+         padding: toRem(70) toRem(15);
+      }
+   }
+   // .subscribe__header
+   &__header {
+      max-width: toRem(735);
+      .section-header__sub-title::before {
+         background-color: $secondary;
+      }
+      .section-header__text {
+         color: $dark;
+      }
+      span {
+         color: #fff;
+      }
+   }
+   // .subscribe__button
+   &__button {
+      @media (max-width: toEm($mobileSmall)) {
+         width: 100%;
+      }
+   }
+   // .subscribe__image
+   &__image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
    }
 }
 
