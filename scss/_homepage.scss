@@ -81,7 +81,7 @@
    }
    // .welcome__body
    &__body {
-      flex: 0 1 toRem(635);
+      flex: 0 1 toRem(690);
       padding: toRem(145) toRem(15) toRem(145) 0;
       @media (max-width: toEm($pc)) {
          padding: toRem(100) toRem(50);
@@ -159,6 +159,15 @@
    &__button {
       @media (max-width: toEm($mobileSmall)) {
          width: 100%;
+      }
+   }
+   // .welcome__mission
+   &__mission {
+      &:not(:last-child) {
+         margin-bottom: toRem(48);
+         @media (max-width: toEm($mobile)) {
+            margin-bottom: toRem(24);
+         }
       }
    }
 }
@@ -262,6 +271,55 @@
    &__text {
       font-size: toRem(16);
       line-height: 1.35;
+   }
+}
+
+.mission-welcome {
+   // .mission-welcome__item
+   &__item {
+      max-width: toRem(675);
+      padding: toRem(28) toRem(40);
+      border: toRem(1) solid #e3e3e3;
+      &:not(:last-child) {
+         margin-bottom: toRem(30);
+         @media (max-width: toEm($mobile)) {
+            margin-bottom: toRem(15);
+         }
+      }
+      @media (max-width: toEm($mobile)) {
+         padding: toRem(20) toRem(15);
+      }
+   }
+   // .mission-welcome__title
+   &__title {
+      position: relative;
+      padding-left: toRem(46);
+      font-family: $secondaryFont;
+      font-weight: 600;
+      font-size: toRem(20);
+      line-height: 1.5;
+      color: $dark;
+      &::before {
+         content: "";
+         position: absolute;
+         left: 0;
+         top: 0;
+         flex: 0 0 toRem(27);
+         width: toRem(27);
+         height: toRem(27);
+         background: url("../img/icons/list-item.svg") 0 0 / contain no-repeat;
+      }
+      &:not(:last-child) {
+         margin-bottom: toRem(12);
+         @media (max-width: toEm($mobileSmall)) {
+            margin-bottom: toRem(5);
+         }
+      }
+   }
+   // .mission-welcome__text
+   &__text {
+      padding-left: toRem(46);
+      line-height: 1.46;
    }
 }
 
