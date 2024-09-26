@@ -5,6 +5,12 @@
    // .page__counts
    &__counts {
    }
+   // .page__presentation
+   &__presentation {
+   }
+   // .page__our-team
+   &__our-team {
+   }
 }
 
 // =============================================================================================================
@@ -217,6 +223,222 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+   }
+}
+
+// =============================================================================================================
+
+.presentation {
+   position: relative;
+   background-color: rgba(64, 221, 182, 0.75);
+   padding: toRem(143) toRem(0);
+   @media (max-width: toEm($pc)) {
+      padding: toRem(100) toRem(0);
+   }
+   @media (max-width: toEm($tablet)) {
+      padding: toRem(70) toRem(0);
+   }
+   // .presentation__container
+   &__container {
+   }
+   // .presentation__header
+   &__header {
+      max-width: toRem(540);
+      margin: 0 auto;
+      .section-header__sub-title::before {
+         background-color: $secondary;
+      }
+      .section-header__text {
+         color: $dark;
+      }
+      &:not(:last-child) {
+         margin-bottom: toRem(47);
+         @media (max-width: toEm($mobile)) {
+            margin-bottom: toRem(25);
+         }
+      }
+   }
+   // .presentation__video-link
+   &__video-link {
+      margin: 0 auto;
+      width: toRem(65);
+      height: toRem(65);
+      border-radius: 50%;
+      background-color: $secondary;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s;
+      img {
+         width: toRem(20);
+         height: toRem(30);
+         object-fit: contain;
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            background-color: $accent;
+         }
+      }
+   }
+   // .presentation__image
+   &__image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+}
+
+// =============================================================================================================
+
+.our-team {
+   padding: toRem(150) toRem(0) toRem(200) toRem(0);
+   @media (max-width: toEm($pc)) {
+      padding: toRem(100) toRem(0);
+   }
+   @media (max-width: toEm($tablet)) {
+      padding: toRem(70) toRem(0);
+   }
+   @media (max-width: toEm($mobile)) {
+      padding: toRem(40) toRem(0);
+   }
+   // .our-team__container
+   &__container {
+   }
+   // .our-team__header
+   &__header {
+      &:not(:last-child) {
+         margin-bottom: toRem(40);
+         @media (max-width: toEm($mobile)) {
+            margin-bottom: toRem(30);
+         }
+      }
+   }
+   // .our-team__list
+   &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: toRem(30);
+      @media (max-width: toEm($pc)) {
+         gap: toRem(15);
+      }
+      @media (max-width: toEm($tablet)) {
+         grid-template-columns: repeat(2, 1fr);
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         grid-template-columns: auto;
+      }
+   }
+   // .our-team__item
+   &__item {
+   }
+}
+
+.team-member {
+   position: relative;
+   min-height: toRem(532);
+   padding: toRem(22);
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+   transition: background-color 0.3s;
+   @media (any-hover: hover) {
+      &:hover {
+         background-color: rgba(107, 119, 229, 0.7);
+      }
+   }
+   @media (max-width: toEm($mobile)) {
+      min-height: toRem(430);
+      padding: toRem(10);
+   }
+   // .team-member__image
+   &__image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+   }
+   // .team-member__info
+   &__info {
+      padding: toRem(24);
+      text-align: center;
+      background-color: #fff;
+      @media (max-width: toEm($mobile)) {
+         padding: toRem(10);
+      }
+   }
+   // .team-member__title
+   &__title {
+      font-family: $secondaryFont;
+      font-weight: 600;
+      font-size: toRem(25);
+      line-height: 1.52;
+      color: $dark;
+      &:not(:last-child) {
+         margin-bottom: toRem(5);
+         @media (max-width: toEm($mobile)) {
+            margin-bottom: 0;
+         }
+      }
+      @media (max-width: toEm($mobile)) {
+         font-size: toRem(22);
+      }
+   }
+   // .team-member__position
+   &__position {
+      line-height: 1.35;
+   }
+   // .team-member__social-list
+   &__social-list {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      pointer-events: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: toRem(13);
+      transition: all 0.3s;
+      @media (any-hover: hover) {
+         .team-member:hover & {
+            opacity: 1;
+            pointer-events: all;
+         }
+      }
+   }
+   // .team-member__social-item
+   &__social-item {
+   }
+   // .team-member__social-link
+   &__social-link {
+      width: toRem(45);
+      height: toRem(45);
+      border-radius: 50%;
+      background-color: $accent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: toRem(10);
+      transition: background-color 0.3s;
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: contain;
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            background-color: $secondary;
+         }
+      }
    }
 }
 
