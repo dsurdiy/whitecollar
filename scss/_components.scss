@@ -361,6 +361,361 @@
 
 // =============================================================================================================
 
+.why {
+   background-color: $dark;
+   &.services-why {
+      background-color: #fff;
+      padding: toRem(150) toRem(0) toRem(100) toRem(0);
+      @media (max-width: toEm($pc)) {
+         padding: toRem(100) toRem(0);
+      }
+      @media (max-width: toEm($tablet)) {
+         padding: toRem(70) toRem(0);
+      }
+      @media (max-width: toEm($mobile)) {
+         padding: toRem(40) toRem(0);
+      }
+   }
+   @media (max-width: toEm($pc)) {
+      background-color: rgba(55, 57, 63, 0.8);
+   }
+   // .why__body
+   &__body {
+      max-width: toRem(1920);
+      margin: 0 auto;
+      position: relative;
+      padding: toRem(135) toRem(0);
+      @media (max-width: toEm($pc)) {
+         padding: toRem(100) toRem(0);
+      }
+      @media (max-width: toEm($tablet)) {
+         padding: toRem(70) toRem(0);
+      }
+      @media (max-width: toEm($mobile)) {
+         padding: toRem(40) toRem(0);
+      }
+   }
+   // .why__container
+   &__container {
+   }
+   // .why__wrapper
+   &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: toRem(40);
+      @media (max-width: toEm($pc)) {
+         flex-direction: column;
+      }
+   }
+   // .why__content
+   &__content {
+      max-width: toRem(610);
+      color: #fff;
+      position: relative;
+      z-index: 1;
+      .services-why & {
+         flex: 0 1 toRem(628);
+         max-width: 100%;
+         color: $dark;
+         @media (max-width: toEm($pc)) {
+            flex: 0 1 auto;
+         }
+      }
+   }
+   // .why__header
+   &__header {
+      & .section-header__container {
+         padding: 0;
+         color: #fff;
+         .services-why & {
+            color: $dark;
+         }
+      }
+      & .section-header__title {
+         max-width: toRem(370);
+         font-size: toRem(30);
+         font-weight: 600;
+         line-height: 1.21;
+         @media (max-width: toEm($mobileSmall)) {
+            font-size: toRem(28);
+         }
+      }
+      & .section-header__text {
+         color: #fff;
+         .services-why & {
+            color: $grey;
+            max-width: toRem(550);
+         }
+      }
+      &:not(:last-child) {
+         margin-bottom: toRem(35);
+         @media (max-width: toEm($mobileSmall)) {
+            margin-bottom: toRem(20);
+         }
+      }
+   }
+   // .why__counter
+   &__counter {
+      &:not(:last-child) {
+         margin-bottom: toRem(35);
+         @media (max-width: toEm($mobileSmall)) {
+            margin-bottom: toRem(20);
+         }
+      }
+      .services-why & {
+         flex: 0 1 toRem(520);
+         margin-top: toRem(120);
+         @media (max-width: toEm($pc)) {
+            margin-top: 0;
+            flex: 0 1 auto;
+         }
+      }
+   }
+   // .why__list
+   &__list {
+      .services-why &:not(:last-child) {
+         margin-bottom: toRem(47);
+         @media (max-width: toEm($mobile)) {
+            margin-bottom: toRem(30);
+         }
+      }
+   }
+   // .why__image
+   &__image {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      max-width: 43.125%; /* 828/1920 */
+      object-fit: cover;
+      @media (max-width: toEm($pc)) {
+         max-width: 100%;
+         width: 100%;
+         z-index: -1;
+      }
+   }
+   // .why__button
+   &__button {
+      @media (max-width: toEm($mobileSmall)) {
+         width: 100%;
+      }
+   }
+}
+
+.counter-why {
+   display: flex;
+   flex-wrap: wrap;
+   gap: toRem(15);
+   .services-why & {
+      gap: toRem(30);
+      @media (max-width: toEm($pc)) {
+         justify-content: center;
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         margin: 0 toRem(-15);
+      }
+   }
+   @media (max-width: toEm($mobileSmall)) {
+      justify-content: center;
+   }
+   // .counter-why__item
+   &__item {
+      background-color: #2e2f34;
+      padding: toRem(27) toRem(30);
+      display: flex;
+      align-items: center;
+      gap: toRem(12);
+      .services-why & {
+         padding: toRem(32) toRem(35);
+         background-color: $mainBg;
+         color: $dark;
+         @media (max-width: toEm($mobileSmall)) {
+            padding: toRem(20) toRem(15);
+         }
+      }
+      @media (max-width: toEm($mobile)) {
+         padding: toRem(20) toRem(15);
+      }
+   }
+   // .counter-why__num
+   &__num {
+      flex: 0 0 toRem(72);
+      width: toRem(72);
+      height: toRem(72);
+      border-radius: 50%;
+      background-color: $dark;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: $secondaryFont;
+      font-weight: 600;
+      font-size: toRem(20);
+      &--95 {
+         background: url("../img/why/ellipse-95.svg") 0 0 / contain no-repeat;
+      }
+      &--85 {
+         background: url("../img/why/ellipse-85.svg") 0 0 / contain no-repeat;
+      }
+      .services-why & {
+         flex: 0 0 toRem(97);
+         width: toRem(97);
+         height: toRem(97);
+         font-size: toRem(25);
+         @media (max-width: toEm($mobile)) {
+            flex: 0 0 toRem(72);
+            width: toRem(72);
+            height: toRem(72);
+            font-size: toRem(20);
+         }
+      }
+   }
+   // .counter-why__content
+   &__content {
+   }
+   // .counter-why__label
+   &__label {
+      font-size: toRem(16);
+      line-height: 1.35;
+      .services-why & {
+         font-size: toRem(20);
+         @media (max-width: toEm($mobileSmall)) {
+            font-size: toRem(16);
+         }
+      }
+      &:not(:last-child) {
+         margin-bottom: toRem(3);
+      }
+   }
+   // .counter-why__title
+   &__title {
+      font-family: $secondaryFont;
+      font-weight: 600;
+      line-height: 1.5;
+      .services-why & {
+         font-size: toRem(22);
+      }
+      &:not(:last-child) {
+         margin-bottom: toRem(2);
+      }
+   }
+   // .counter-why__text
+   &__text {
+      line-height: 1.46;
+      color: $grey;
+   }
+}
+
+.list-why {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   column-gap: toRem(37);
+   row-gap: toRem(23);
+   .services-why & {
+      column-gap: toRem(55);
+      row-gap: toRem(30);
+      @media (max-width: toEm($mobile)) {
+         gap: toRem(30);
+      }
+   }
+   @media (max-width: toEm($mobileSmall)) {
+      grid-template-columns: auto;
+      gap: toRem(10);
+   }
+   // .list-why__item
+   &__item {
+      font-family: $secondaryFont;
+      font-size: toRem(20);
+      line-height: 1.65;
+      .services-why & {
+         @media (max-width: toEm($mobile)) {
+            line-height: 1.2;
+         }
+      }
+      span {
+         font-weight: 700;
+      }
+      &:not(:last-child) {
+         display: flex;
+         align-items: center;
+         gap: toRem(8);
+         .services-why & {
+            align-items: flex-start;
+         }
+         &::before {
+            content: "";
+            flex: 0 0 toRem(27);
+            width: toRem(27);
+            height: toRem(27);
+            background: url("../img/icons/list-item-accent.svg") 0 0 / contain no-repeat;
+            margin-top: toRem(3);
+         }
+      }
+      .services-why &:last-child {
+         display: flex;
+         align-items: flex-start;
+         gap: toRem(8);
+         &::before {
+            content: "";
+            flex: 0 0 toRem(27);
+            width: toRem(27);
+            height: toRem(27);
+            background: url("../img/icons/list-item-accent.svg") 0 0 / contain no-repeat;
+            margin-top: toRem(3);
+         }
+      }
+   }
+   // .list-why__content
+   &__content {
+   }
+   // .list-why__stars
+   &__stars {
+      display: flex;
+      align-items: center;
+      gap: toRem(4);
+      color: #ffb342;
+      img {
+         width: toRem(17);
+         height: toRem(17);
+      }
+   }
+   // .list-why__label
+   &__label {
+      display: flex;
+      flex-wrap: wrap;
+      gap: toRem(7);
+      &:not(:last-child) {
+         margin-bottom: toRem(13);
+         @media (max-width: toEm($mobile)) {
+            margin-bottom: toRem(5);
+         }
+      }
+   }
+   // .list-why__text
+   &__text {
+      font-family: $mainFont;
+      color: $grey;
+      font-size: toRem(18);
+      line-height: 1.46;
+   }
+   // .list-why__link
+   &__link {
+      font-weight: 600;
+      line-height: 1.22;
+      color: $accent;
+      padding-bottom: toRem(2);
+      border-bottom: toRem(2) solid;
+      transition: color 0.3s;
+      @media (any-hover: hover) {
+         &:hover {
+            color: $secondary;
+         }
+      }
+   }
+}
+
+// =============================================================================================================
+
 .blog-list {
    display: grid;
    grid-template-columns: repeat(2, 1fr);
