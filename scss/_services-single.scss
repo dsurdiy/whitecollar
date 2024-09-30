@@ -1,0 +1,141 @@
+.page {
+   // .page__services-single
+   &__services-single {
+   }
+}
+
+// =============================================================================================================
+
+.services-single {
+   // .services-single__container
+   &__container {
+   }
+   // .services-single__body
+   &__body {
+      display: flex;
+      align-items: flex-start;
+      gap: toRem(50);
+   }
+   // .services-single__aside
+   &__aside {
+      flex: 0 0 toRem(478);
+   }
+   // .services-single__content
+   &__content {
+      flex: 0 1 toRem(692);
+   }
+}
+
+// =============================================================================================================
+
+.aside-service {
+   // .aside-service__filter
+   &__filter {
+   }
+   // .aside-service__download
+   &__download {
+   }
+   // .aside-service__help
+   &__help {
+   }
+}
+
+.filter-service {
+   // .filter-service__body
+   &__body {
+   }
+   // .filter-service__item
+   &__item {
+   }
+   // .filter-service__input
+   &__input {
+   }
+}
+
+.download-service {
+   // .download-service__title
+   &__title {
+   }
+   // .download-service__text
+   &__text {
+   }
+   // .download-service__button
+   &__button {
+   }
+   // .download-service__button--pdf
+   &__button--pdf {
+   }
+   // .download-service__button--zip
+   &__button--zip {
+   }
+}
+
+.help {
+   // .help__header
+   &__header {
+   }
+   // .help__button
+   &__button {
+   }
+}
+
+// =============================================================================================================
+
+.content-service {
+   // .content-service__image
+   &__image {
+      max-width: 100%;
+   }
+   // .content-service__title
+   &__title {
+   }
+   // .content-service__text
+   &__text {
+   }
+   // .content-service__accent
+   &__accent {
+   }
+   // .content-service__benefits
+   &__benefits {
+   }
+   // .content-service__questions
+   &__questions {
+   }
+}
+
+.benefits-service {
+   // .benefits-service__image
+   &__image {
+      max-width: 100%;
+   }
+   // .benefits-service__content
+   &__content {
+   }
+   // .benefits-service__title
+   &__title {
+   }
+   // .benefits-service__text
+   &__text {
+   }
+   // .benefits-service__list
+   &__list {
+   }
+   // .benefits-service__item
+   &__item {
+   }
+}
+
+.questions-service {
+   // .questions-service__title
+   &__title {
+   }
+   // .questions-service__text
+   &__text {
+   }
+   // .questions-service__list
+   &__list {
+   }
+   // .questions-service__item
+   &__item {
+   }
+}
