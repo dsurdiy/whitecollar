@@ -99,9 +99,10 @@
           <div class="services-single__body">
             <aside class="services-single__aside aside-service">
               <div class="aside-service__filter filter-service">
+                <h3 class="filter-service__title">Services</h3>
                 <form class="filter-service__body" action="#">
                   <label class="filter-service__item">
-                    <input class="filter-service__input" type="radio" name="service[]">
+                    <input class="filter-service__input" type="radio" name="service[]" checked>
                     Financial Consultancy
                   </label>
                   <label class="filter-service__item">
@@ -127,7 +128,7 @@
                 </form>
               </div>
               <div class="aside-service__download download-service">
-                <h5 class="download-service__title">Download</h5>
+                <h3 class="download-service__title">Download</h3>
                 <p class="download-service__text">
                   One-to-one customer service with robust
                   deliverables.
@@ -150,6 +151,7 @@
                   </div>
                 </div>
                 <a class="help__button button" href="#">Contact Us</a>
+                <img class="help__image" src="img/services/help-bg.webp" alt="Contact Us">
               </div>
             </aside>
             <article class="services-single__content content-service">
@@ -175,7 +177,9 @@
                 </p>
               </div>
               <div class="content-service__benefits benefits-service">
-                <img class="benefits-service__image" src="img/services/service-benefits.webp" alt="Image">
+                <div class="benefits-service__image">
+                  <img src="img/services/service-benefits.webp" alt="Our benefits">
+                </div>
                 <div class="benefits-service__content">
                   <h3 class="benefits-service__title">Our benefits</h3>
                   <p class="benefits-service__text">Incubate standards compliant channels benefits.</p>
@@ -196,10 +200,44 @@
                   </p>
                 </div>
                 <ul class="questions-service__list">
-                  <li class="questions-service__item">How does our pricing works?</li>
-                  <li class="questions-service__item">Where do I look for “Frequently Asked” Questions?</li>
-                  <li class="questions-service__item">Which template is the best for business?</li>
-                  <li class="questions-service__item">Which template is the best for business?</li>
+                  <li class="questions-service__item">
+                    <input class="questions-service__input" type="checkbox" id="faq_1">
+                    <label class="questions-service__label" for="faq_1">How does our pricing works?</label>
+                    <div class="questions-service__answer">
+                      <p>
+                        Proactively envisioned multimedia based expertise media growth superior collaboration.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="questions-service__item">
+                    <input class="questions-service__input" type="checkbox" id="faq_2">
+                    <label class="questions-service__label" for="faq_2">Where do I look for “Frequently Asked”
+                      Questions?</label>
+                    <div class="questions-service__answer">
+                      <p>
+                        Proactively envisioned multimedia based expertise media growth superior collaboration.
+                        Multimedia proactively envisioned based superior collaboration expertise media growth.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="questions-service__item">
+                    <input class="questions-service__input" type="checkbox" id="faq_3">
+                    <label class="questions-service__label" for="faq_3">Which template is the best for business?</label>
+                    <div class="questions-service__answer">
+                      <p>
+                        Proactively envisioned multimedia based expertise media growth superior collaboration.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="questions-service__item">
+                    <input class="questions-service__input" type="checkbox" id="faq_4">
+                    <label class="questions-service__label" for="faq_4">Which template is the best for business?</label>
+                    <div class="questions-service__answer">
+                      <p>
+                        Proactively envisioned multimedia based expertise media growth superior collaboration.
+                      </p>
+                    </div>
+                  </li>
                 </ul>
               </div>
             </article>
