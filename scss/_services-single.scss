@@ -25,14 +25,27 @@
       display: flex;
       align-items: flex-start;
       gap: toRem(50);
+      @media (max-width: toEm($pc)) {
+         gap: toRem(30);
+      }
+      @media (max-width: toEm($tablet)) {
+         flex-direction: column;
+      }
    }
    // .services-single__aside
    &__aside {
       flex: 0 1 toRem(478);
+      @media (max-width: toEm($tablet)) {
+         flex: 0 1 100%;
+         width: 100%;
+      }
    }
    // .services-single__content
    &__content {
       flex: 0 1 toRem(692);
+      @media (max-width: toEm($tablet)) {
+         flex: 0 1 auto;
+      }
    }
 }
 
@@ -41,17 +54,37 @@
 .aside-service {
    display: grid;
    gap: toRem(50);
-   @media (max-width: toEm($mobile)) {
+   @media (max-width: toEm($pc)) {
       gap: toRem(30);
+   }
+   @media (max-width: toEm($tablet)) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: toRem(15);
+   }
+   @media (max-width: toEm($mobile)) {
+      grid-template-columns: auto;
    }
    // .aside-service__filter
    &__filter {
+      @media (max-width: toEm($mobileSmall)) {
+         margin: 0 toRem(-15);
+      }
    }
    // .aside-service__download
    &__download {
+      @media (max-width: toEm($mobileSmall)) {
+         margin: 0 toRem(-15);
+      }
    }
    // .aside-service__help
    &__help {
+      @media (max-width: toEm($tablet)) {
+         grid-column: 1 / -1;
+         grid-row: 1;
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         margin: 0 toRem(-15);
+      }
    }
 }
 
@@ -59,6 +92,12 @@
    padding: toRem(56) toRem(35);
    background-color: $mainBg;
    font-family: $secondaryFont;
+   @media (max-width: toEm($tablet)) {
+      padding: toRem(30);
+   }
+   @media (max-width: toEm($mobileSmall)) {
+      padding: toRem(25) toRem(15);
+   }
    // .filter-service__title
    &__title {
       font-weight: 600;
@@ -70,6 +109,9 @@
          @media (max-width: toEm($mobileSmall)) {
             margin-bottom: toRem(15);
          }
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         font-size: toRem(22);
       }
    }
    // .filter-service__body
@@ -92,6 +134,11 @@
          background-color: $secondary;
          background-image: url("../img/icons/ch-right-white.svg");
       }
+      @media (max-width: toEm($mobileSmall)) {
+         padding: toRem(10) toRem(55) toRem(10) toRem(10);
+         font-size: toRem(18);
+         background: url("../img/icons/ch-right.svg") right toRem(15) center / toRem(11) toRem(22) no-repeat;
+      }
    }
    // .filter-service__input
    &__input {
@@ -106,6 +153,12 @@
 .download-service {
    padding: toRem(50) toRem(45);
    background-color: $mainBg;
+   @media (max-width: toEm($tablet)) {
+      padding: toRem(30);
+   }
+   @media (max-width: toEm($mobileSmall)) {
+      padding: toRem(25) toRem(15);
+   }
    // .download-service__title
    &__title {
       font-family: $secondaryFont;
@@ -123,6 +176,9 @@
          @media (max-width: toEm($mobileSmall)) {
             margin-bottom: toRem(10);
          }
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         font-size: toRem(22);
       }
    }
    // .download-service__text
@@ -165,6 +221,9 @@
             color: #fff;
          }
       }
+      @media (max-width: toEm($mobile)) {
+         width: 100%;
+      }
    }
 }
 
@@ -173,6 +232,9 @@
    padding: toRem(96) toRem(50);
    background-color: rgba(64, 221, 182, 0.75);
    text-align: center;
+   @media (max-width: toEm($tablet)) {
+      padding: toRem(40);
+   }
    // .help__header
    &__header {
       .section-header__sub-title::before {
@@ -233,6 +295,15 @@
       color: $dark;
       &:not(:last-child) {
          margin-bottom: toRem(15);
+         @media (max-width: toEm($mobileSmall)) {
+            margin-bottom: toRem(8);
+         }
+      }
+      @media (max-width: toEm($mobile)) {
+         font-size: toRem(25);
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         font-size: toRem(22);
       }
    }
    // .content-service__text
@@ -241,7 +312,7 @@
       &:not(:last-child) {
          margin-bottom: toRem(40);
          @media (max-width: toEm($mobile)) {
-            margin-bottom: toRem(20);
+            margin-bottom: toRem(15);
          }
       }
       p {
@@ -280,6 +351,10 @@
    flex-wrap: wrap;
    align-items: center;
    gap: toRem(29);
+   @media (max-width: toEm($mobileSmall)) {
+      flex-direction: column;
+      gap: toRem(15);
+   }
    // .benefits-service__image
    &__image {
       flex: 1 1 47%;
@@ -351,6 +426,12 @@
       &:not(:last-child) {
          margin-bottom: toRem(10);
       }
+      @media (max-width: toEm($mobile)) {
+         font-size: toRem(25);
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         font-size: toRem(22);
+      }
    }
    // .questions-service__text
    &__text {
@@ -389,8 +470,10 @@
    }
    // .questions-service__label
    &__label {
-      position: relative;
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      column-gap: toRem(20);
       padding: toRem(25) toRem(30);
       border: toRem(1) solid #e3e3e3;
       font-family: $secondaryFont;
@@ -400,6 +483,7 @@
       color: $dark;
       cursor: pointer;
       .questions-service__input:checked ~ & {
+         flex-direction: row-reverse;
          border-bottom-color: transparent;
       }
       @media (any-hover: hover) {
@@ -407,26 +491,31 @@
             text-decoration: underline;
          }
       }
-      &::before {
-         content: "";
-         position: absolute;
-         top: 48%;
-         right: toRem(30);
-         width: toRem(16);
-         height: toRem(16);
-         background-color: #000;
-      }
       &::after {
          content: "";
-         position: absolute;
-         top: 39%;
-         right: toRem(36);
-         width: toRem(2);
+         flex: 0 0 toRem(16);
+         width: toRem(16);
          height: toRem(16);
-         background-color: #000;
+         background: url("../img/icons/plus.svg") 0 0 / contain no-repeat;
+         .questions-service__input:checked ~ & {
+            display: none;
+         }
       }
-      .questions-service__input:checked ~ &::after {
-         transform: scale(0);
+      &::before {
+         content: "";
+         flex: 0 0 toRem(16);
+         width: toRem(16);
+         height: toRem(2);
+         border-radius: toRem(5);
+         background-color: #000;
+         display: none;
+         .questions-service__input:checked ~ & {
+            display: block;
+         }
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         padding: toRem(20) toRem(15);
+         font-size: toRem(18);
       }
    }
    // .questions-service__answer
@@ -438,6 +527,9 @@
          line-height: 1.46;
          border: toRem(1) solid #e3e3e3;
          border-top-color: transparent;
+         @media (max-width: toEm($mobileSmall)) {
+            padding: toRem(0) toRem(20) toRem(10);
+         }
       }
    }
 }
