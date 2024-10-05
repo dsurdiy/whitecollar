@@ -1,0 +1,202 @@
+.page {
+   // .page__price
+   &__price {
+   }
+}
+
+// =============================================================================================================
+
+.price {
+   padding: toRem(150) toRem(0);
+   @media (max-width: toEm($pc)) {
+      padding: toRem(100) toRem(0);
+   }
+   @media (max-width: toEm($tablet)) {
+      padding: toRem(70) toRem(0);
+   }
+   @media (max-width: toEm($mobile)) {
+      padding: toRem(40) toRem(0);
+   }
+   // .price__container
+   &__container {
+   }
+   // .price__header
+   &__header {
+      max-width: toRem(650);
+      margin: 0 auto;
+      &:not(:last-child) {
+         margin-bottom: toRem(90);
+         @media (max-width: toEm($tablet)) {
+            margin-bottom: toRem(50);
+         }
+         @media (max-width: toEm($mobileSmall)) {
+            margin-bottom: toRem(30);
+         }
+      }
+   }
+   // .price__list
+   &__list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: center;
+      column-gap: toRem(30);
+      row-gap: toRem(50);
+      @media (max-width: toEm($pc)) {
+         gap: toRem(15);
+      }
+   }
+   // .price__item
+   &__item {
+      flex: 0 1 toRem(386);
+   }
+}
+
+.item-price {
+   padding: toRem(47) toRem(30);
+   background-color: $mainBg;
+   text-align: center;
+   @media (max-width: toEm($pc)) {
+      padding: toRem(40) toRem(15);
+   }
+   &--popular {
+      position: relative;
+      background-color: $secondary;
+      color: #fff;
+      &::before {
+         content: "Most Popular";
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         padding: toRem(10) toRem(30);
+         background-color: $accent;
+         font-family: $secondaryFont;
+         font-weight: 600;
+         font-size: toRem(20);
+         line-height: 1.5;
+         color: #fff;
+         transform: translateY(-100%);
+         @media (max-width: toEm($pc)) {
+            transform: translateY(0%);
+         }
+      }
+      @media (max-width: toEm($pc)) {
+         padding-top: toRem(80);
+      }
+   }
+   // .item-price__title
+   &__title {
+      font-family: $secondaryFont;
+      font-weight: 700;
+      font-size: toRem(30);
+      line-height: 1.1;
+      color: $dark;
+      .item-price--popular & {
+         color: #fff;
+      }
+      &:not(:last-child) {
+         margin-bottom: toRem(25);
+         @media (max-width: toEm($mobileSmall)) {
+            margin-bottom: toRem(15);
+         }
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         font-size: toRem(25);
+      }
+   }
+   // .item-price__info
+   &__info {
+      padding: toRem(23) toRem(33);
+      border-top: toRem(1) solid #d3d3d3;
+      border-bottom: toRem(1) solid #d3d3d3;
+      &:not(:last-child) {
+         margin-bottom: toRem(34);
+         @media (max-width: toEm($mobileSmall)) {
+            margin-bottom: toRem(20);
+         }
+      }
+      @media (max-width: toEm($pc)) {
+         padding: toRem(20) toRem(0);
+      }
+   }
+   // .item-price__value
+   &__value {
+      font-family: $secondaryFont;
+      font-weight: 700;
+      color: $dark;
+      font-size: toRem(20);
+      line-height: 1.1;
+      .item-price--popular & {
+         color: #fff;
+      }
+      span {
+         font-size: toRem(40);
+         @media (max-width: toEm($mobileSmall)) {
+            font-size: toRem(35);
+         }
+      }
+      &:not(:last-child) {
+         margin-bottom: toRem(23);
+         @media (max-width: toEm($mobileSmall)) {
+            margin-bottom: toRem(12);
+         }
+      }
+   }
+   // .item-price__label
+   &__label {
+      display: inline-block;
+      padding: toRem(7) toRem(32);
+      background-color: $accent;
+      line-height: 1.57;
+      color: #208068;
+      text-align: center;
+      .item-price--popular & {
+         color: $secondary;
+         background-color: #fff;
+      }
+   }
+   // .item-price__list
+   &__list {
+      &:not(:last-child) {
+         margin-bottom: toRem(45);
+         @media (max-width: toEm($mobileSmall)) {
+            margin-bottom: toRem(20);
+         }
+      }
+   }
+   // .item-price__benefit
+   &__benefit {
+      line-height: 1.35;
+      &:not(:last-child) {
+         margin-bottom: toRem(25);
+         @media (max-width: toEm($mobileSmall)) {
+            margin-bottom: toRem(15);
+         }
+      }
+      span {
+         color: $dark;
+         font-weight: 700;
+         .item-price--popular & {
+            color: $accent;
+         }
+      }
+   }
+   // .item-price__button
+   &__button {
+      .item-price--popular & {
+         background-color: #fff;
+         color: $secondary;
+         @media (any-hover: hover) {
+            &:hover {
+               background-color: $accent;
+               color: $dark;
+            }
+         }
+      }
+      @media (max-width: toEm($mobile)) {
+         width: 100%;
+         min-height: toRem(65);
+      }
+   }
+}
