@@ -1,0 +1,75 @@
+.page {
+   // .page__blog
+   &__blog {
+   }
+}
+
+// =============================================================================================================
+
+.blog {
+   padding: toRem(150) toRem(0);
+   @media (max-width: toEm($pc)) {
+      padding: toRem(100) toRem(0);
+   }
+   @media (max-width: toEm($tablet)) {
+      padding: toRem(70) toRem(0);
+   }
+   @media (max-width: toEm($mobile)) {
+      padding: toRem(50) toRem(0);
+   }
+   // .blog__container
+   &__container {
+      text-align: center;
+   }
+   // .blog__header
+   &__header {
+      &:not(:last-child) {
+         margin-bottom: toRem(47);
+         @media (max-width: toEm($mobile)) {
+            margin-bottom: toRem(30);
+         }
+      }
+   }
+   // .blog__items
+   &__items {
+      text-align: left;
+      &:not(:last-child) {
+         margin-bottom: toRem(47);
+         @media (max-width: toEm($mobileSmall)) {
+            margin-bottom: toRem(30);
+         }
+      }
+   }
+   // .blog__button
+   &__button {
+      min-width: toRem(140);
+      min-height: toRem(65);
+      padding: toRem(10) toRem(20);
+      background-color: $secondary;
+      color: #fff;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: toRem(10);
+      transition: background-color 0.3s;
+      &::after {
+         content: "";
+         flex: 0 0 toRem(5);
+         width: toRem(5);
+         height: toRem(10);
+         background: url("../img/icons/ch-right-white.svg") 0 0 / contain no-repeat;
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            background-color: $accent;
+         }
+      }
+      @media (max-width: toEm($mobile)) {
+         min-width: toRem(185);
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         width: 100%;
+      }
+   }
+}
