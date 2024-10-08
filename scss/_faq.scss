@@ -1,0 +1,167 @@
+.page {
+   // .page__faq
+   &__faq {
+   }
+}
+
+// =============================================================================================================
+
+.faq {
+   padding: toRem(150) toRem(0);
+   @media (max-width: toEm($pc)) {
+      padding: toRem(100) toRem(0);
+   }
+   @media (max-width: toEm($tablet)) {
+      padding: toRem(70) toRem(0);
+   }
+   @media (max-width: toEm($mobile)) {
+      padding: toRem(50) toRem(0);
+   }
+   // .faq__container
+   &__container {
+      display: flex;
+      align-items: flex-start;
+      gap: toRem(50);
+      @media (max-width: toEm($pc)) {
+         gap: toRem(30);
+      }
+      @media (max-width: toEm($tablet)) {
+         gap: toRem(15);
+      }
+      @media (max-width: toEm($mobile)) {
+         flex-direction: column;
+         row-gap: toRem(30);
+      }
+   }
+   // .faq__filter
+   &__filter {
+      flex: 0 1 toRem(359);
+      @media (max-width: toEm($mobile)) {
+         flex: 0 1 auto;
+         width: 100%;
+         text-align: center;
+      }
+   }
+   // .faq__list
+   &__list {
+      flex: 0 1 toRem(810);
+      display: grid;
+      gap: toRem(30);
+      @media (max-width: toEm($tablet)) {
+         gap: toRem(15);
+      }
+      @media (max-width: toEm($mobile)) {
+         flex: 0 1 auto;
+         width: 100%;
+      }
+   }
+   // .faq__item
+   &__item {
+   }
+   // .faq__label
+   &__label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: toRem(30);
+      padding: toRem(25) toRem(30);
+      border: toRem(1) solid #e3e3e3;
+      font-family: $secondaryFont;
+      font-weight: 600;
+      font-size: toRem(20);
+      line-height: 1.5;
+      color: $dark;
+      cursor: pointer;
+      .faq__input:checked ~ & {
+         border-bottom-color: transparent;
+         &::after {
+            transform: rotate(180deg);
+         }
+      }
+      &::after {
+         content: "";
+         flex: 0 0 toRem(16);
+         width: toRem(16);
+         height: toRem(10);
+         background: url("../img/icons/ch-down.svg") 0 0 / contain no-repeat;
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         padding: toRem(15) toRem(20);
+         font-size: toRem(18);
+      }
+   }
+   // .faq__input
+   &__input {
+      position: absolute;
+      width: 0;
+      height: 0;
+      opacity: 0;
+      appearance: none;
+   }
+   // .faq__answer
+   &__answer {
+      display: none;
+      .faq__input:checked ~ & {
+         display: block;
+         padding: toRem(5) toRem(30) toRem(20);
+         border: toRem(1) solid #e3e3e3;
+         border-top-color: transparent;
+         line-height: 1.46;
+         @media (max-width: toEm($mobileSmall)) {
+            padding: toRem(5) toRem(20) toRem(15);
+         }
+      }
+   }
+}
+
+.filter-faq {
+   padding: toRem(56) toRem(35);
+   background-color: $mainBg;
+   font-family: $secondaryFont;
+   color: $dark;
+   line-height: 1.27;
+   @media (max-width: toEm($tablet)) {
+      padding: toRem(40) toRem(20);
+   }
+   @media (max-width: toEm($mobile)) {
+      padding: toRem(20) toRem(0);
+   }
+   // .filter-faq__title
+   &__title {
+      font-weight: 600;
+      font-size: toRem(25);
+      &:not(:last-child) {
+         margin-bottom: toRem(24);
+         @media (max-width: toEm($mobileSmall)) {
+            margin-bottom: toRem(15);
+         }
+      }
+   }
+   // .filter-faq__body
+   &__body {
+   }
+   // .filter-faq__item
+   &__item {
+      display: block;
+      padding: toRem(14) toRem(20);
+      cursor: pointer;
+      &:not(:last-child) {
+         margin-bottom: toRem(8);
+         @media (max-width: toEm($mobile)) {
+            margin-bottom: 0;
+         }
+      }
+      &:has(input:checked) {
+         background-color: $secondary;
+         color: #fff;
+      }
+   }
+   // .filter-faq__input
+   &__input {
+      position: absolute;
+      width: 0;
+      height: 0;
+      opacity: 0;
+      appearance: none;
+   }
+}
