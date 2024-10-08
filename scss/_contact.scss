@@ -19,8 +19,20 @@
    }
    // .get-in-touch__container
    &__container {
+      position: relative;
       display: flex;
       column-gap: toRem(50);
+      @media (max-width: toEm($pc)) {
+         column-gap: toRem(30);
+      }
+      @media (max-width: toEm($tablet)) {
+         flex-direction: column-reverse;
+         row-gap: toRem(30);
+         text-align: center;
+         .section-header__sub-title {
+            justify-content: center;
+         }
+      }
    }
    // .get-in-touch__image
    &__image {
@@ -30,10 +42,20 @@
          height: 100%;
          object-fit: cover;
       }
+      @media (max-width: toEm($tablet)) {
+         flex: 0 1 auto;
+         height: toRem(400);
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         margin: 0 toRem(-15);
+      }
    }
    // .get-in-touch__content
    &__content {
       flex: 0 1 toRem(585);
+      @media (max-width: toEm($tablet)) {
+         flex: 0 1 auto;
+      }
    }
    // .get-in-touch__header
    &__header {
@@ -46,6 +68,13 @@
    }
    // .get-in-touch__list
    &__list {
+      @media (max-width: toEm($tablet)) {
+         display: flex;
+         flex-wrap: wrap;
+         align-items: center;
+         justify-content: space-evenly;
+         gap: toRem(30);
+      }
    }
    // .get-in-touch__item
    &__item {
@@ -54,9 +83,13 @@
       gap: toRem(19);
       &:not(:last-child) {
          margin-bottom: toRem(30);
-         @media (max-width: toEm($mobileSmall)) {
-            margin-bottom: toRem(15);
+         @media (max-width: toEm($tablet)) {
+            margin-bottom: 0;
          }
+      }
+      @media (max-width: toEm($tablet)) {
+         justify-content: center;
+         flex-direction: column;
       }
    }
    // .get-in-touch__icon
@@ -87,5 +120,13 @@
       font-family: $secondaryFont;
       color: $dark;
       line-height: 1.5;
+      transition: color 0.3s;
+      @media (any-hover: hover) {
+         &:hover {
+            color: $accent;
+         }
+      }
    }
 }
+
+// =============================================================================================================
