@@ -1,0 +1,111 @@
+.page {
+   // .page__licencing
+   &__licencing {
+   }
+}
+
+// =============================================================================================================
+
+.licencing {
+   // .licencing__container
+   &__container {
+      padding: toRem(150) toRem(15);
+      border-top: toRem(1) solid #dddddd;
+      @media (max-width: toEm($pc)) {
+         padding: toRem(100) toRem(15);
+      }
+      @media (max-width: toEm($tablet)) {
+         padding: toRem(70) toRem(15);
+      }
+   }
+   // .licencing__header
+   &__header {
+      &:not(:last-child) {
+         margin-bottom: toRem(70);
+         @media (max-width: toEm($tablet)) {
+            margin-bottom: toRem(50);
+         }
+         @media (max-width: toEm($mobileSmall)) {
+            margin-bottom: toRem(35);
+         }
+      }
+      .section-header__title {
+         font-size: toRem(60);
+         @media (max-width: toEm($pc)) {
+            font-size: toRem(50);
+         }
+         @media (max-width: toEm($mobile)) {
+            font-size: toRem(40);
+         }
+      }
+   }
+   // .licencing__content
+   &__content {
+      display: grid;
+      gap: toRem(100);
+      @media (max-width: toEm($tablet)) {
+         gap: toRem(70);
+      }
+      @media (max-width: toEm($mobile)) {
+         gap: toRem(50);
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         gap: toRem(30);
+      }
+      h3 {
+         font-family: $secondaryFont;
+         font-weight: 600;
+         line-height: 1.21;
+         color: $dark;
+         font-size: toRem(40);
+         &:not(:last-child) {
+            margin-bottom: toRem(11);
+         }
+         @media (max-width: toEm($mobile)) {
+            font-size: toRem(32);
+         }
+      }
+      h4 {
+         font-family: $secondaryFont;
+         font-weight: 600;
+         line-height: 1.21;
+         color: $dark;
+         font-size: toRem(30);
+         &:not(:last-child) {
+            margin-bottom: toRem(8);
+         }
+         @media (max-width: toEm($mobile)) {
+            font-size: toRem(24);
+         }
+         span {
+            font-weight: 400;
+            color: $accent;
+         }
+      }
+   }
+   // .licencing__block
+   &__block {
+   }
+   // .licencing__text
+   &__text {
+      line-height: 1.46;
+      &--accent {
+         color: $accent;
+      }
+      &:not(:last-child) {
+         margin-bottom: toRem(30);
+         @media (max-width: toEm($mobileSmall)) {
+            margin-bottom: toRem(20);
+         }
+      }
+      p {
+         &:not(:last-child) {
+            margin-bottom: toRem(8);
+         }
+      }
+      span {
+         font-weight: 500;
+         color: $accent;
+      }
+   }
+}

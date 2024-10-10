@@ -1,0 +1,24 @@
+.page {
+   // .page__changelog
+   &__changelog {
+   }
+}
+
+// =============================================================================================================
+
+.changelog {
+   // .changelog__container
+   &__container {
+      padding: toRem(120) toRem(15) toRem(140) toRem(15);
+      border-top: toRem(1) solid #dddddd;
+      @media (max-width: toEm($pc)) {
+         padding: toRem(100) toRem(15);
+      }
+      @media (max-width: toEm($tablet)) {
+         padding: toRem(70) toRem(15);
+      }
+   }
+   // .changelog__header
+   &__header {
+   }
+}
