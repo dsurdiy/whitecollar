@@ -1,6 +1,16 @@
 .page {
    // .page__licencing
    &__licencing {
+      margin-top: toRem(196);
+      @media (max-width: toEm($tablet)) {
+         margin-top: toRem(181);
+      }
+      @media (max-width: toEm($mobile)) {
+         margin-top: toRem(118);
+      }
+      @media (max-width: toEm(600)) {
+         margin-top: toRem(97);
+      }
    }
 }
 

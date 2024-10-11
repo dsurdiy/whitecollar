@@ -35,6 +35,7 @@
       min-height: toRem(458);
       padding-block: toRem(50);
       padding-inline: 9.010417%; /* 173/1920 */
+      margin-top: toRem(196);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -45,6 +46,7 @@
       .top--hero & {
          min-height: toRem(815);
          padding-left: 6.09375%; /* 117/1920 */
+         margin-top: toRem(196);
          @media (max-width: toEm(1600)) {
             width: 50%;
          }
@@ -52,10 +54,17 @@
             width: 55%;
          }
          @media (max-width: toEm($tablet)) {
+            margin-top: toRem(181);
             width: 100%;
             min-height: toRem(700);
             background-color: rgba(55, 57, 63, 0.8);
             backdrop-filter: none;
+         }
+         @media (max-width: toEm($mobile)) {
+            margin-top: toRem(118);
+         }
+         @media (max-width: toEm(600)) {
+            margin-top: toRem(97);
          }
       }
       @media (max-width: toEm(1440)) {
@@ -65,13 +74,18 @@
          width: 50%;
       }
       @media (max-width: toEm($tablet)) {
+         margin-top: toRem(181);
          padding-inline: toRem(30);
       }
       @media (max-width: toEm($mobile)) {
+         margin-top: toRem(118);
          width: 100%;
          min-height: toRem(400);
          background-color: rgba(55, 57, 63, 0.8);
          backdrop-filter: none;
+      }
+      @media (max-width: toEm(600)) {
+         margin-top: toRem(97);
       }
       @media (max-width: toEm($mobileSmall)) {
          padding-block: toRem(35);

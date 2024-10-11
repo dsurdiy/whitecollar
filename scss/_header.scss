@@ -1,4 +1,9 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
   // .header__top
   &__top {
     position: relative;
@@ -14,6 +19,10 @@
     @media (max-width: toEm($mobile)) {
       padding: toRem(5) 0;
     }
+  }
+  // .header__main
+  &__main {
+    background-color: #fff;
   }
   // .header__container
   &__container {
@@ -114,7 +123,7 @@
     @media (max-width: toEm($mobile)) {
       padding: toRem(5) 0;
       justify-content: space-between;
-      column-gap: toRem(25);
+      column-gap: toRem(20);
     }
     @media (max-width: toEm($mobileSmall)) {
       column-gap: toRem(15);
